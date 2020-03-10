@@ -14,7 +14,7 @@
         "url": "https://github.com/adrijshikhar/adrijshikhar.github.io.git"
     },
     "scripts": {
-        "deploy": "gh-pages -d dist -b master"
+        "deploy": "gulp && gh-pages -d dist -b master"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.12.1",
