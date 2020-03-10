@@ -1,104 +1,118 @@
-import { task, src, dest, series } from 'gulp';
+import { task, src, dest, watch } from 'gulp';
 import { sync, logError } from 'gulp-sass';
-import header from 'gulp-header';
 import cleanCSS from 'gulp-clean-css';
-import rename from "gulp-rename";
 import uglify from 'gulp-uglify';
 import autoprefixer from 'gulp-autoprefixer';
-
+import log from "fancy-log";
 var browserSync = require('browser-sync').create();
 
-// const done = "done"
-// Copy third party libraries from /node_modules into /vendor
-task('vendor', function (done) {
+function img_copy(){
+  src([
+    'src/img/*',
+  ])
+    .pipe(dest('./dist/img'))
+}
 
-  // Bootstrap
+function vendor() {
   src([
     './node_modules/bootstrap/dist/**/*',
     '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
     '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
   ])
-    .pipe(dest('./vendor/bootstrap'))
-
-  // Font Awesome
+    .pipe(dest('./src/vendor/bootstrap'))
   src([
     './node_modules/@fortawesome/**/*',
   ])
-    .pipe(dest('./vendor'))
-
-  // jQuery
+    .pipe(dest('./src/vendor'))
   src([
     './node_modules/jquery/dist/*',
     '!./node_modules/jquery/dist/core.js'
   ])
-    .pipe(dest('./vendor/jquery'))
+    .pipe(dest('./src/vendor/jquery'))
+}
 
-  // jQuery Easing
+function vendor_minify() {
   src([
-    './node_modules/jquery.easing/*.js'
+    './node_modules/bootstrap/dist/**/*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
+    '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
   ])
-    .pipe(dest('./vendor/jquery-easing'))
-    done();
-});
+    .pipe(dest('./dist/vendor/bootstrap'))
 
-// Compile SCSS
-task('css:compile', function () {
-  return src('./scss/**/*.scss')
+    src([
+    './node_modules/@fortawesome/**/*',
+  ])
+    .pipe(dest('./dist/vendor'))
+
+    src([
+    './node_modules/jquery/dist/*',
+    '!./node_modules/jquery/dist/core.js'
+  ])
+    .pipe(dest('./dist/vendor/jquery'))
+
+    src([
+    './src/vendor/jquery-easing/*.js'
+  ]).pipe(uglify())
+    .pipe(dest('./dist/vendor/jquery-easing'))
+}
+
+function scss_compile() {
+  return src('./src/scss/*')
     .pipe(sync({
       outputStyle: 'expanded'
     }).on('error', logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(dest('./css'))
-});
+    .pipe(autoprefixer())
+    .pipe(dest('./src/css'))
+    .pipe(browserSync.stream());
+}
 
-// Minify CSS
-task('css:minify', series('css:compile', function () {
+function minify_css() {
   return src([
-    './css/*.css',
-    '!./css/*.min.css'
+    './src/css/*.css',
   ])
     .pipe(cleanCSS())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(dest('./css'))
-    .pipe(browserSync.stream());
-}));
+    .pipe(dest('./dist/css'))
+}
 
-// CSS
-task('css', series('css:compile', 'css:minify'));
-
-// Minify JavaScript
-task('js:minify', function () {
+function minify_js() {
   return src([
-    './js/*.js',
-    '!./js/*.min.js'
+    './src/js/*',
   ])
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(dest('./js'))
-    .pipe(browserSync.stream());
-});
+    .pipe(dest('./dist/js'))
+}
 
-// JS
-task('js', series('js:minify'));
+function html() {
+  src([
+    './src/*.html',
+  ])
+    .pipe(dest('./dist/'))
+}
 
-// Default task
-task('default', series('css', 'js', 'vendor'));
-
-// Configure the browserSync task
-task('browserSync', function () {
+function dev() {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./src",
+      index: "/index.html"
     }
   });
-});
+  vendor()
+  watch('src/scss/**/*.scss', scss_compile)
+  watch('src/js/**/*.js').on('change', browserSync.reload);
+  watch('src/*.html').on('change', browserSync.reload);
+}
 
-// Dev task
-task('dev', series('css', 'js', 'browserSync'));
+function serve(done) {
+  scss_compile()
+  vendor_minify()
+  minify_css()
+  minify_js()
+  img_copy()
+  html()
+  done()
+  log.info("Ready to serve")
+}
+
+
+exports.default = serve
+exports.dev = dev
