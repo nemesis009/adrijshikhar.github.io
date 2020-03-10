@@ -13,6 +13,13 @@ function img_copy(){
     .pipe(dest('./dist/img'))
 }
 
+function fonts_copy(){
+  src([
+    'src/fonts/*',
+  ])
+    .pipe(dest('./dist/fonts'))
+}
+
 function vendor() {
   src([
     './node_modules/bootstrap/dist/**/*',
@@ -107,6 +114,7 @@ function serve(done) {
   vendor_minify()
   minify_css()
   minify_js()
+  fonts_copy()
   img_copy()
   html()
   done()
