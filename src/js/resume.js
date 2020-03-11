@@ -1,3 +1,4 @@
+/* eslint-disable*/
 (function($) {
   "use strict"; // Start of use strict
 
@@ -24,5 +25,4 @@
   $('body').scrollspy({
     target: '#sideNav'
   });
-
 })(jQuery); // End of use strict
