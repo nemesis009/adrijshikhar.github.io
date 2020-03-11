@@ -14,8 +14,7 @@
     "es6": true,
     "browser": true,
     "node": true,
-    "jquery": true,
-    "mocha": true
+    "jquery": true
   },
   "ignorePatterns": ["dist/", "node_modules/", "src/vendor"],
   "rules": {
