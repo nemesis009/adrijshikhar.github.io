@@ -13,6 +13,9 @@ function img_copy() {
 function fonts_copy() {
   src(["src/fonts/*"]).pipe(dest("./dist/fonts"));
 }
+function assets_copy() {
+  src(["src/assets/*"]).pipe(dest("./dist/assets"));
+}
 
 function vendor() {
   src([
@@ -94,6 +97,7 @@ function serve(done) {
   minify_js();
   fonts_copy();
   img_copy();
+  assets_copy();
   html();
   done();
   log.info("Ready to serve");
