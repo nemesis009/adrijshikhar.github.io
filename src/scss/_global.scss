@@ -61,6 +61,7 @@ p.lead {
 
 .social-icons {
   .icon {
+    border: 0;
     display: inline-block;
     height: 3.5rem;
     width: 3.5rem;
@@ -71,12 +72,17 @@ p.lead {
     font-size: 1.5rem;
     line-height: 3.5rem;
     margin-right: 1rem;
+    transition: all 0.1s ease-in-out;
 
     &:last-child {
       margin-right: 0;
     }
 
     &:hover {
+      background-color: $primary;
+    }
+
+    &:focus {
       background-color: $primary;
     }
   }
@@ -89,5 +95,52 @@ p.lead {
     &:hover {
       color: $primary;
     }
+  }
+}
+
+.tooltip {
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.bs-tooltip-right {
+    .arrow::before {
+      border-right-color: $primary;
+      border-left-color: $primary;
+
+    }
+  }
+
+  &.bs-tooltip-left {
+    .arrow::before {
+      border-right-color: $primary;
+      border-left-color: $primary;
+
+    }
+  }
+
+  &.bs-tooltip-top {
+    .arrow::before {
+      border-top-color: $primary;
+      border-bottom-color: $primary;
+
+    }
+  }
+
+  &.bs-tooltip-bottom {
+    .arrow::before {
+      border-top-color: $primary;
+      border-bottom-color: $primary;
+
+    }
+  }
+
+  .tooltip-inner {
+    @include heading-font;
+    font-size: $normalFontSize;
+    color: white;
+    background-color: $primary;
+
   }
 }

@@ -88,6 +88,7 @@ p.lead {
 }
 
 .social-icons .icon {
+  border: 0;
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
@@ -98,6 +99,7 @@ p.lead {
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-right: 1rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .social-icons .icon:last-child {
@@ -108,12 +110,59 @@ p.lead {
   background-color: #1685d5;
 }
 
+.social-icons .icon:focus {
+  background-color: #1685d5;
+}
+
 .dev-icons {
   font-size: 3rem;
 }
 
 .dev-icons .list-inline-item i:hover {
   color: #1685d5;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip.bs-tooltip-right .arrow::before {
+  border-right-color: #1685d5;
+  border-left-color: #1685d5;
+}
+
+.tooltip.bs-tooltip-left .arrow::before {
+  border-right-color: #1685d5;
+  border-left-color: #1685d5;
+}
+
+.tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: #1685d5;
+  border-bottom-color: #1685d5;
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-top-color: #1685d5;
+  border-bottom-color: #1685d5;
+}
+
+.tooltip .tooltip-inner {
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  background-color: #1685d5;
+}
+
+#sideNav {
+  padding: 0;
+}
+
+#sideNav .navbar-brand {
+  padding: 0.8rem;
+}
+
+#sideNav .navbar-toggler {
+  margin: 0.8rem;
 }
 
 #sideNav .navbar-nav .nav-item {
