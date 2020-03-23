@@ -1,14 +1,25 @@
 #sideNav {
+  padding: 0;
+
+  .navbar-brand {
+    padding: $gutterWidth;
+  }
+
+  .navbar-toggler {
+    margin: $gutterWidth;
+  }
+
   .navbar-nav .nav-item {
     padding: 0;
-    
+
     .nav-link {
       padding: $gutterWidth;
       font-weight: 800;
       letter-spacing: 0.05rem;
       text-transform: uppercase;
       font-size: $normalFontSize;
-      &.active{
+
+      &.active {
         background-color: $dark;
       }
     }
@@ -41,8 +52,8 @@
       padding: 0.5rem;
 
       .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
+        max-width: $gutterWidth*16;
+        max-height: $gutterWidth*16;
         border: 0.5rem solid fade-out($white, 0.8);
       }
     }
