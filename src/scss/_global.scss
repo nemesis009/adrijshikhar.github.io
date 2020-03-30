@@ -33,13 +33,13 @@ h1 {
 h2 {
   @include heading-font;
   color: $gray-900;
-  font-size: $normalFontSize*3;
+  font-size: $normalFontSize*3.5;
 
 }
 
 h3 {
   @include heading-font;
-  font-size: $normalFontSize*1.5;
+  font-size: $normalFontSize*1.2;
 
 }
 
@@ -47,7 +47,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 500;
   @include heading-font;
-  font-size: $normalFontSize*1.5;
+  font-size: $normalFontSize*1.2;
 }
 
 p.lead {
