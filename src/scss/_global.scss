@@ -13,48 +13,53 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $gray-700;
-}
-
 h1 {
   @include heading-font;
+  text-transform: uppercase;
   color: $gray-900;
-  font-size: $normalFontSize * 4;
+  font-weight: 700;
+
+  font-size: $normalFontSize * 3;
 }
 
 h2 {
   @include heading-font;
-  color: $gray-900;
-  font-size: $normalFontSize * 3.5;
+  text-transform: uppercase;
+  color: $gray-800;
+  font-weight: 600;
+
+  font-size: $normalFontSize * 2.4;
 }
 
 h3 {
-  @include heading-font;
+  @include subheading-font;
+  color: $gray-700;
   font-size: $normalFontSize * 1.2;
 }
 
+h4 {
+  @include body-font;
+  color: $gray-600;
+  font-size: $normalFontSize * 1.1;
+}
+
 .subheading {
-  text-transform: uppercase;
   font-weight: 500;
-  @include heading-font;
-  font-size: $normalFontSize * 1.2;
+  @include subtitle-font;
+  font-size: $normalFontSize*0.8;
 }
 
 p.lead {
   font-size: $normalFontSize;
   font-weight: 400;
+  text-align: justify;
+
 }
 
 .para-content {
   font-size: $normalFontSize;
+  text-align: justify;
+
 }
 
 .social-icons {
