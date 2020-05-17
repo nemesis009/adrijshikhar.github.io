@@ -126,7 +126,16 @@ p.lead {
   font-size: 3rem;
 }
 
-.dev-icons .list-inline-item i:hover {
+.dev-icons img,
+.dev-icons svg {
+  width: 3rem;
+  height: 3.125rem;
+}
+
+.dev-icons .list-inline-item:hover,
+.dev-icons .list-inline-item svg:hover .icon,
+.dev-icons .list-inline-item img:hover .icon {
+  fill: #1685d5;
   color: #1685d5;
 }
 

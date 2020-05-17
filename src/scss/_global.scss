@@ -27,27 +27,25 @@ h6 {
 h1 {
   @include heading-font;
   color: $gray-900;
-  font-size: $normalFontSize*4;
+  font-size: $normalFontSize * 4;
 }
 
 h2 {
   @include heading-font;
   color: $gray-900;
-  font-size: $normalFontSize*3.5;
-
+  font-size: $normalFontSize * 3.5;
 }
 
 h3 {
   @include heading-font;
-  font-size: $normalFontSize*1.2;
-
+  font-size: $normalFontSize * 1.2;
 }
 
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
   @include heading-font;
-  font-size: $normalFontSize*1.2;
+  font-size: $normalFontSize * 1.2;
 }
 
 p.lead {
@@ -91,15 +89,23 @@ p.lead {
 .dev-icons {
   font-size: 3rem;
 
-  .list-inline-item i {
-    &:hover {
+  img,
+  svg {
+    width: 3rem;
+    height: 3.125rem;
+  }
+
+  .list-inline-item {
+    &:hover,
+    svg:hover .icon,
+    img:hover .icon {
+      fill: $primary;
       color: $primary;
     }
   }
 }
 
 .tooltip {
-
   &.show {
     opacity: 1;
   }
@@ -108,7 +114,6 @@ p.lead {
     .arrow::before {
       border-right-color: $primary;
       border-left-color: $primary;
-
     }
   }
 
@@ -116,7 +121,6 @@ p.lead {
     .arrow::before {
       border-right-color: $primary;
       border-left-color: $primary;
-
     }
   }
 
@@ -124,7 +128,6 @@ p.lead {
     .arrow::before {
       border-top-color: $primary;
       border-bottom-color: $primary;
-
     }
   }
 
@@ -132,7 +135,6 @@ p.lead {
     .arrow::before {
       border-top-color: $primary;
       border-bottom-color: $primary;
-
     }
   }
 
@@ -141,6 +143,5 @@ p.lead {
     font-size: $normalFontSize;
     color: white;
     background-color: $primary;
-
   }
 }
