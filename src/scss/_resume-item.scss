@@ -1,28 +1,30 @@
 section.resume-section {
+  min-height: 100vh;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   .resume-item {
+    flex-direction: row;
+
     .resume-content {
       max-width: 60rem;
     }
     .resume-date {
-      min-width: none;
+      text-align: end;
+      min-width: 12rem;
     }
   }
 }
-@media (min-width: 768px) {
+
+@media (max-width: 992px) {
   section.resume-section {
-    min-height: 100vh;
     .resume-item {
+      flex-direction: column;
+      .resume-content{
+        margin: 0 !important;
+      }
       .resume-date {
-        min-width: 18rem;
+        padding-left: 0 !important;
       }
     }
-  }
-}
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
   }
 }

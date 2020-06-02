@@ -4,6 +4,7 @@ body {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
+  font-size: $normalFontSize;
 }
 
 @media (min-width: 992px) {
@@ -46,20 +47,18 @@ h4 {
 .subheading {
   font-weight: 500;
   @include subtitle-font;
-  font-size: $normalFontSize*0.8;
+  font-size: $normalFontSize * 0.8;
 }
 
 p.lead {
   font-size: $normalFontSize;
   font-weight: 400;
   text-align: justify;
-
 }
 
 .para-content {
-  font-size: $normalFontSize;
+  font-size: $normalFontSize * 0.9;
   text-align: justify;
-
 }
 
 .social-icons {
@@ -92,15 +91,26 @@ p.lead {
 }
 
 .dev-icons {
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   font-size: 3rem;
-
+  display: flex;
+  flex-direction: row;
   img,
   svg {
     width: 3rem;
     height: 3.125rem;
   }
 
-  .list-inline-item {
+  .list-item {
+    width: fit-content;
+    margin-right: $gutterWidth;
     &:hover,
     svg:hover .icon,
     img:hover .icon {

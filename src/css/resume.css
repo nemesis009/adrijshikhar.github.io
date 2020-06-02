@@ -1,15 +1,9 @@
-@font-face {
-  font-family: 'Open Sans';
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap");
 body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   padding-top: 54px;
   color: #868e96;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 992px) {
@@ -61,7 +55,7 @@ p.lead {
 }
 
 .para-content {
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   text-align: justify;
 }
 
@@ -94,6 +88,19 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 992px) {
+  .dev-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .dev-icons img,
@@ -102,9 +109,16 @@ p.lead {
   height: 3.125rem;
 }
 
-.dev-icons .list-inline-item:hover,
-.dev-icons .list-inline-item svg:hover .icon,
-.dev-icons .list-inline-item img:hover .icon {
+.dev-icons .list-item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0.8rem;
+}
+
+.dev-icons .list-item:hover,
+.dev-icons .list-item svg:hover .icon,
+.dev-icons .list-item img:hover .icon {
   fill: #1685d5;
   color: #1685d5;
 }
@@ -214,8 +228,13 @@ p.lead {
 }
 
 section.resume-section {
+  min-height: 100vh;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
+}
+
+section.resume-section .resume-item {
+  flex-direction: row;
 }
 
 section.resume-section .resume-item .resume-content {
@@ -223,23 +242,24 @@ section.resume-section .resume-item .resume-content {
 }
 
 section.resume-section .resume-item .resume-date {
-  min-width: none;
+  text-align: end;
+  min-width: 12rem;
 }
 
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
+@media (max-width: 992px) {
+  section.resume-section .resume-item {
+    flex-direction: column;
+  }
+  section.resume-section .resume-item .resume-content {
+    margin: 0 !important;
   }
   section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
+    padding-left: 0 !important;
   }
 }
 
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
+body {
+  list-style: none;
 }
 
 .bg-primary {
