@@ -1,69 +1,13 @@
 @font-face {
-  font-family: Roboto;
-  src: url("../fonts/roboto/Roboto-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: Monsterrat;
-  src: url("../fonts/monsterrat/Montserrat-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: OpenSans;
-  src: url("../fonts/open-sans/OpenSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: Gilroy;
-  src: url("../fonts/gilroy/Gilroy-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url("../fonts/poppins/Poppins-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: PoppinsBold;
-  src: url("../fonts/poppins/Poppins-Bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: PoppinsSemiBold;
-  src: url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: auto;
-}
-
-@font-face {
-  font-family: Baron;
-  src: url("../fonts/baron/BaronNeue-Regular.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: auto;
 }
 
 body {
-  font-family: OpenSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   padding-top: 54px;
   color: #868e96;
 }
@@ -76,15 +20,15 @@ body {
 }
 
 h1 {
-  font-family: PoppinsSemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
   color: #212529;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3.6rem;
 }
 
 h2 {
-  font-family: PoppinsSemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
   color: #343a40;
   font-weight: 600;
@@ -92,20 +36,21 @@ h2 {
 }
 
 h3 {
-  font-family: PoppinsSemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #495057;
+  font-weight: 600;
   font-size: 1.44rem;
 }
 
 h4 {
-  font-family: OpenSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #868e96;
   font-size: 1.32rem;
 }
 
 .subheading {
   font-weight: 500;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.96rem;
 }
 
@@ -189,7 +134,7 @@ p.lead {
 }
 
 .tooltip .tooltip-inner {
-  font-family: PoppinsSemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.2rem;
   color: white;
   background-color: #1685d5;
@@ -213,7 +158,7 @@ p.lead {
 
 #sideNav .navbar-nav .nav-item .nav-link {
   padding: 0.8rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   font-size: 1.2rem;

@@ -17,7 +17,7 @@ h1 {
   @include heading-font;
   text-transform: uppercase;
   color: $gray-900;
-  font-weight: 700;
+  font-weight: 600;
 
   font-size: $normalFontSize * 3;
 }
@@ -27,13 +27,13 @@ h2 {
   text-transform: uppercase;
   color: $gray-800;
   font-weight: 600;
-
   font-size: $normalFontSize * 2.4;
 }
 
 h3 {
   @include subheading-font;
   color: $gray-700;
+  font-weight: 600;
   font-size: $normalFontSize * 1.2;
 }
 
@@ -144,7 +144,7 @@ p.lead {
   }
 
   .tooltip-inner {
-    @include heading-font;
+    @include body-font;
     font-size: $normalFontSize;
     color: white;
     background-color: $primary;
