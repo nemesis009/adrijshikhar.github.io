@@ -14,6 +14,9 @@
         "url": "https://github.com/adrijshikhar/adrijshikhar.github.io.git"
     },
     "scripts": {
+        "start": "npm run dev",
+        "build": "gulp",
+        "dev": "gulp dev",
         "deploy": "gulp && gh-pages -d dist -b master",
         "lint": "eslint src --max-warnings 10000 --fix"
     },
@@ -22,7 +25,6 @@
         "babel-core": "7.0.0-bridge.0",
         "bootstrap": "4.5.0",
         "gulp-cli": "^2.2.0",
-        "gulp-inject": "^5.0.5",
         "jquery": "3.5.1"
     },
     "devDependencies": {
