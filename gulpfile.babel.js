@@ -46,7 +46,7 @@ function vendor_minify() {
 
   src(["./src/vendor/jquery-easing/*.js"])
     .pipe(uglify())
-    .pipe(dest("./public/jquery-easing"));
+    .pipe(dest("./public/vendor/jquery-easing"));
 }
 
 function scss_compile() {
