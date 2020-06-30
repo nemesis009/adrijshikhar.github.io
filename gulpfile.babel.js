@@ -7,53 +7,53 @@ import log from "fancy-log";
 let browserSync = require("browser-sync").create();
 
 function img_copy() {
-  src(["src/img/*"]).pipe(dest("./dist/img"));
+  src(["src/img/*"]).pipe(dest("./public/img"));
 }
 
 function fonts_copy() {
-  src(["src/fonts/*"]).pipe(dest("./dist/fonts"));
+  src(["src/fonts/*"]).pipe(dest("./public/fonts"));
 }
 function assets_copy() {
-  src(["src/assets/*"]).pipe(dest("./dist/assets"));
+  src(["src/assets/*"]).pipe(dest("./public/assets"));
 }
 
 function vendor() {
   src([
-    "./node_modules/bootstrap/dist/**/*",
-    "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
-    "!./node_modules/bootstrap/dist/css/bootstrap-reboot*"
+    "./node_modules/bootstrap/public/**/*",
+    "!./node_modules/bootstrap/public/css/bootstrap-grid*",
+    "!./node_modules/bootstrap/public/css/bootstrap-reboot*",
   ]).pipe(dest("./src/vendor/bootstrap"));
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./src/vendor"));
   src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js"
+    "./node_modules/jquery/public/*",
+    "!./node_modules/jquery/public/core.js",
   ]).pipe(dest("./src/vendor/jquery"));
 }
 
 function vendor_minify() {
   src([
-    "./node_modules/bootstrap/dist/**/*",
-    "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
-    "!./node_modules/bootstrap/dist/css/bootstrap-reboot*"
-  ]).pipe(dest("./dist/vendor/bootstrap"));
+    "./node_modules/bootstrap/public/**/*",
+    "!./node_modules/bootstrap/public/css/bootstrap-grid*",
+    "!./node_modules/bootstrap/public/css/bootstrap-reboot*",
+  ]).pipe(dest("./public/vendor/bootstrap"));
 
-  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./dist/vendor"));
+  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./public/vendor"));
 
   src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js"
-  ]).pipe(dest("./dist/vendor/jquery"));
+    "./node_modules/jquery/public/*",
+    "!./node_modules/jquery/public/core.js",
+  ]).pipe(dest("./public/vendor/jquery"));
 
   src(["./src/vendor/jquery-easing/*.js"])
     .pipe(uglify())
-    .pipe(dest("./dist/vendor/jquery-easing"));
+    .pipe(dest("./public/vendor/jquery-easing"));
 }
 
 function scss_compile() {
   return src("./src/scss/*")
     .pipe(
       sync({
-        outputStyle: "expanded"
+        outputStyle: "expanded",
       }).on("error", logError)
     )
     .pipe(autoprefixer())
@@ -62,27 +62,23 @@ function scss_compile() {
 }
 
 function minify_css() {
-  return src(["./src/css/*.css"])
-    .pipe(cleanCSS())
-    .pipe(dest("./dist/css"));
+  return src(["./src/css/*.css"]).pipe(cleanCSS()).pipe(dest("./public/css"));
 }
 
 function minify_js() {
-  return src(["./src/js/*"])
-    .pipe(uglify())
-    .pipe(dest("./dist/js"));
+  return src(["./src/js/*"]).pipe(uglify()).pipe(dest("./public/js"));
 }
 
 function html() {
-  src(["./src/*.html"]).pipe(dest("./dist/"));
+  src(["./src/*.html"]).pipe(dest("./public/"));
 }
 
 function dev() {
   browserSync.init({
     server: {
       baseDir: "./src",
-      index: "/index.html"
-    }
+      index: "/index.html",
+    },
   });
   vendor();
   watch("src/scss/**/*.scss", scss_compile);
