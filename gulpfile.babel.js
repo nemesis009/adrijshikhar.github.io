@@ -19,34 +19,34 @@ function assets_copy() {
 
 function vendor() {
   src([
-    "./node_modules/bootstrap/public/**/*",
-    "!./node_modules/bootstrap/public/css/bootstrap-grid*",
-    "!./node_modules/bootstrap/public/css/bootstrap-reboot*",
+    "./node_modules/bootstrap/dist/**/*",
+    "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
+    "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
   ]).pipe(dest("./src/vendor/bootstrap"));
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./src/vendor"));
   src([
-    "./node_modules/jquery/public/*",
-    "!./node_modules/jquery/public/core.js",
+    "./node_modules/jquery/dist/*",
+    "!./node_modules/jquery/dist/core.js",
   ]).pipe(dest("./src/vendor/jquery"));
 }
 
 function vendor_minify() {
   src([
-    "./node_modules/bootstrap/public/**/*",
-    "!./node_modules/bootstrap/public/css/bootstrap-grid*",
-    "!./node_modules/bootstrap/public/css/bootstrap-reboot*",
+    "./node_modules/bootstrap/dist/**/*",
+    "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
+    "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
   ]).pipe(dest("./public/vendor/bootstrap"));
 
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./public/vendor"));
 
   src([
-    "./node_modules/jquery/public/*",
-    "!./node_modules/jquery/public/core.js",
+    "./node_modules/jquery/dist/*",
+    "!./node_modules/jquery/dist/core.js",
   ]).pipe(dest("./public/vendor/jquery"));
 
   src(["./src/vendor/jquery-easing/*.js"])
     .pipe(uglify())
-    .pipe(dest("./public/vendor/jquery-easing"));
+    .pipe(dest("./public/jquery-easing"));
 }
 
 function scss_compile() {
