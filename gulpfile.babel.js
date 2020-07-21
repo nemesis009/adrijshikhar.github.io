@@ -7,14 +7,14 @@ import log from "fancy-log";
 let browserSync = require("browser-sync").create();
 
 function img_copy() {
-  src(["src/img/*"]).pipe(dest("./dist/img"));
+  src(["src/img/*"]).pipe(dest("./public/img"));
 }
 
 function fonts_copy() {
-  src(["src/fonts/*"]).pipe(dest("./dist/fonts"));
+  src(["src/fonts/*"]).pipe(dest("./public/fonts"));
 }
 function assets_copy() {
-  src(["src/assets/*"]).pipe(dest("./dist/assets"));
+  src(["src/assets/*"]).pipe(dest("./public/assets"));
 }
 
 function vendor() {
@@ -33,13 +33,13 @@ function vendor_minify() {
     "./node_modules/bootstrap/dist/**/*",
     "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
     "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
-  ]).pipe(dest("./dist/vendor/bootstrap"));
+  ]).pipe(dest("./public/vendor/bootstrap"));
 
-  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./dist/vendor"));
+  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./public/vendor"));
 
-  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./dist/vendor/jquery"));
+  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./public/vendor/jquery"));
 
-  src(["./src/vendor/jquery-easing/*.js"]).pipe(uglify()).pipe(dest("./dist/vendor/jquery-easing"));
+  src(["./src/vendor/jquery-easing/jquery.easing.min.js"]).pipe(uglify()).pipe(dest("./public/vendor/jquery-easing"));
 }
 
 function scss_compile() {
@@ -55,15 +55,15 @@ function scss_compile() {
 }
 
 function minify_css() {
-  return src(["./src/css/*.css"]).pipe(cleanCSS()).pipe(dest("./dist/css"));
+  return src(["./src/css/*.css"]).pipe(cleanCSS()).pipe(dest("./public/css"));
 }
 
 function minify_js() {
-  return src(["./src/js/*"]).pipe(uglify()).pipe(dest("./dist/js"));
+  return src(["./src/js/*"]).pipe(uglify()).pipe(dest("./public/js"));
 }
 
 function html() {
-  src(["./src/*.html"]).pipe(dest("./dist/"));
+  src(["./src/*.html"]).pipe(dest("./public/"));
 }
 
 function dev() {
