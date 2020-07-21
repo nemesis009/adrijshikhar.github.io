@@ -1,0 +1,12 @@
+ <div  class="resume-box">
+                <h2 class=" ">Skills</h2>
+                <div class="subheading ">Programming Languages &amp; Tools</div>
+                <ul class="fa-ul mb-0">
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Git</li>
+                    <li>HTML And CSS</li>
+                    <li>Linux</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>

@@ -1,0 +1,235 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Resume - Adrij Shikhar</title>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <div id="loader-div"></div>
+  <nav class="navbar bg-primary" id="sideNav">
+    <a class="navbar-brand " href="#page-top">
+      <img class="profile-pic" src="./data/images/loader.svg" alt="" id="profile_pic"></img>
+    </a>
+
+    <div class="navbar-links">
+      <ul class="navbar-nav">
+        <li class="nav-item" onclick="load(this)" for="about">
+          <a class="nav-link" id="about">About</a>
+        </li>
+        <li class="nav-item" onclick="load(this)" for="experience">
+          <a class="nav-link" id="experience">Experience</a>
+        </li>
+        <li class="nav-item" onclick="load(this)" for="education">
+          <a class="nav-link" id="education">Education</a>
+        </li>
+        <li class="nav-item" onclick="load(this)" for="skills">
+          <a class="nav-link" id="skills">Skills</a>
+        </li>
+        <li class="nav-item" onclick="load(this)" for="interests">
+          <a class="nav-link" id="interests">Interests</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container-main">
+    <section class="resume-section" id="view"></section>
+  </main>
+  <script>
+    var canvas = null;
+    var context = null;
+    var rotateAngle = 0;
+    var fps = 120;
+    var id = 0;
+    const root = window.location.href.replace("index.html", "");
+
+    // console.log(root);
+    window.onload = function () {
+      load_profile_pic()
+      pre_load();
+    };
+
+
+    function pre_loader() {
+      function loader(timestamp) {
+        cancelAnimationFrame(id);
+        setTimeout(() => {
+          canvas.width = canvas.width;
+          context.translate(150, 150);
+          context.rotate((rotateAngle * Math.PI) / 180);
+          context.beginPath();
+          context.lineWidth = 10;
+          context.arc(0, 0, 60, 0, 0.5 * Math.PI);
+          context.strokeStyle = "rgba(15, 92, 147,1)";
+          context.stroke();
+          context.closePath();
+          context.save();
+
+          context.beginPath();
+          context.arc(0, 0, 60, Math.PI, 1.5 * Math.PI);
+          context.stroke();
+          context.closePath();
+          context.restore();
+          rotateAngle = (rotateAngle + 7) % 360;
+          id = requestAnimationFrame(loader);
+        }, 1000 / fps);
+      }
+      requestAnimationFrame(loader);
+    }
+
+    window.onpopstate = function (event) {
+      if (history.state == null) {
+        if (document.getElementById("view").innerHTML == null) pre_load();
+      } else {
+        var x = new XMLHttpRequest();
+        var location = history.state;
+        var url = location.substring(location.lastIndexOf("/") + 1,
+          location.lastIndexOf("."));
+        active(url);
+        x.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            history.replaceState(history.state, null, url);
+            document.getElementById("view").style.display = "flex";
+            document.getElementById("view").innerHTML = this.responseText;
+            if (history.state.includes("about")) {
+              load_social_icons();
+            }
+            document.getElementById("loader-div").style.display = "none";
+            context.restore();
+          } else {
+            load_div();
+            pre_loader();
+          }
+        };
+        x.open("GET", location, true);
+        x.send();
+      }
+    };
+
+    function load(object) {
+      active(object.getAttribute("for"));
+      var location = null;
+      location = root + "data/" + object.getAttribute("for") + ".txt";
+      if (history.state == null || history.state != location) {
+        load_div();
+        pre_loader();
+
+        var x = new XMLHttpRequest();
+        x.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            history.pushState(
+              location,
+              null,
+              "/js-portfolio/" + object.getAttribute("for")
+            );
+            if (object.getAttribute("for") == "about") {
+              load_social_icons();
+            }
+            document.getElementById("view").style.display = "flex";
+            document.getElementById("view").innerHTML = this.responseText;
+            document.getElementById("loader-div").style.display = "none";
+            context.restore();
+          } else {
+            load_div();
+            pre_loader();
+          }
+        };
+        location = root + "data/" + object.getAttribute("for") + ".txt";
+        // console.log(root);
+        x.open("GET", location, true);
+        x.send();
+      }
+    }
+
+    function load_div() {
+      document.getElementById("view").style.display = "none";
+      document.getElementById("loader-div").style.display = "flex";
+      document.getElementById("loader-div").innerHTML =
+        '<canvas id="loader" width="300" height="300">Canvas not supported</canvas>';
+      canvas = document.getElementById("loader");
+      context = canvas.getContext("2d");
+    }
+
+    function pre_load() {
+      active("about");
+      var x = new XMLHttpRequest();
+
+      x.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("view").style.display = "flex";
+          load_social_icons();
+          document.getElementById("view").innerHTML = this.responseText;
+          document.getElementById("loader-div").style.display = "none";
+          context.restore();
+        } else {
+          load_div();
+          pre_loader();
+        }
+      };
+      var location = root + "data/about.txt";
+
+      history.replaceState(location, null, "/js-portfolio/about");
+      x.open("GET", location, true);
+      x.send();
+    }
+
+    function load_profile_pic() {
+      var x = new XMLHttpRequest();
+
+      x.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("profile_pic").src = location;
+        }
+      };
+      var location = root + "data/images/profile.jpg";
+      x.open("GET", location, true);
+      x.send();
+    }
+
+    function load_social_icons() {
+      var x = new Array;
+      var id_icons = ["l", "g", "f"];
+      var location = root + "data/images/";
+      var social_icons = [location + "linkedin-64.png", location + "github_logo.png", location + "facebook-64.png"];
+      for (let i = 0; i < social_icons.length; i++) {
+        x[i] = new XMLHttpRequest();
+        x[i].open("GET", social_icons[i], true);
+        x[i].send();
+        x[i].onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(id_icons[i]).src = social_icons[i];
+          } else {
+            document.getElementById(id_icons[i]).src = root + "data/images/loader.svg";
+          }
+
+        }
+      }
+
+    }
+
+    function active(navlink) {
+      var notactive = [...document.getElementsByClassName("nav-link")];
+      notactive.forEach(function (element) {
+
+        var curr_link = element.getAttribute("id");
+        if (curr_link != navlink) {
+          element.classList.add("inactive");
+          element.classList.remove("active");
+        } else {
+          element.classList.add("active");
+          element.classList.remove("inactive");
+        }
+      });
+
+
+    }
+  </script>
+</body>
+
+</html>

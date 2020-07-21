@@ -1,0 +1,23 @@
+  <div  class="resume-box">
+                <h2 class=" ">Education</h2>
+                  <div class="resume-item">
+                    <div class="resume-content ">
+                        <h3>Indian Institute of Technology, Roorkee</h3>
+                        <div class="subheading ">Bachelor of technology</div>
+                        <p>Chemical Engineering</p>
+                    </div>
+                    <div class="resume-date ">
+                        <span class="text-primary">July 2018 - Present</span>
+                    </div>
+                </div>
+                <div class="resume-item ">
+                    <div class="resume-content ">
+                        <h3>Gulab Rai Montessori</h3>
+                        <div class="subheading ">PCM with Computer Science</div>
+                        <p>Board % : 93.6</p>
+                    </div>
+                    <div class="resume-date ">
+                        <span class="text-primary">April 2015 - March 2017</span>
+                    </div>
+                </div>
+            </div>

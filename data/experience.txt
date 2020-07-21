@@ -1,0 +1,25 @@
+
+ <div  class="resume-box">
+                <h2 class=" ">Experience</h2>
+                  <div class="resume-item   ">
+                    <div class="resume-content ">
+                        <h3>Developer At SDSLabs</h3>
+                        <div class="subheading ">IIT Roorkee</div>
+                        <p>Think. Build. Ship.</p>
+                    </div>
+                    <div class="resume-date ">
+                        <span class="text-primary">January 2019 - Present</span>
+                    </div>
+                </div>
+                <br />
+                  <div class="resume-item   ">
+                    <div class="resume-content ">
+                        <h3>Event Manager At National Social Service</h3>
+                        <div class="subheading ">IIT Roorkee</div>
+                        <p>With the goal to work for the betterment of society and instill the spirit of social service.</p>
+                    </div>
+                    <div class="resume-date ">
+                        <span class="text-primary">August 2018 - Present</span>
+                    </div>
+                </div>
+            </div>

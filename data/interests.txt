@@ -1,0 +1,6 @@
+
+            <div  class="resume-box">
+                <h2 class=" ">Interests</h2>
+                <p>Apart from being a web developer, I enjoy most of my time playing guitar. I have an OCD for music and love to have a sorted music library.</p>
+                <p  >When forced indoors, I follow a number of sci-fi genre movies and television shows like Suits, and I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in every field.</p>
+            </div>

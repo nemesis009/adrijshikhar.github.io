@@ -1,0 +1,21 @@
+      <div  class="resume-box">
+                <h1>Adrij
+                    <span class="text-primary">Shikhar</span>
+                </h1>
+                <div class="subheading  ">193/32 -B · Civil Lines, Bareilly · (821) 805-8928 ·
+                    <a href="mailto:ashikhar@ee.iitr.ac.in" class="text-primary">ashikhar@ee.iitr.ac.in</a>
+                </div>
+                <p class="lead">Skilled in C++, Multi-Threading in Java, JavaServer Pages (JSP), Java Database Connectivity (JDBC) and Linux. Upcoming strong business developed professional with a Bachelor of Technology from Indian Institute of Technology, Roorkee. Iterative
+                    approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/adrij-shikhar-460a89111/">
+                        <img class="small-icons" src="./data/images/loader.svg" alt="" id="l">
+                    </a>
+                    <a href="https://github.com/adrijshikhar/">
+                        <img class="small-icons" src="./data/images/loader.svg" alt="" id="g">
+                    </a>
+                    <a href="https://www.facebook.com/adrij.shikhar">
+                       <img class="small-icons" src="./data/images/loader.svg" alt="" id="f">
+                    </a>
+                </div>
+            </div>
