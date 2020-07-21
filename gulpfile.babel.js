@@ -24,11 +24,9 @@ function vendor() {
     "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
   ]).pipe(dest("./src/vendor/bootstrap"));
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./src/vendor"));
-  src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js",
-  ]).pipe(dest("./src/vendor/jquery"));
+  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./src/vendor/jquery"));
 }
+src(["./node_modules/jquery.easing/*js"]).pipe(dest("./src/vendor/jquery-easing"));
 
 function vendor_minify() {
   src([
@@ -39,14 +37,9 @@ function vendor_minify() {
 
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./public/vendor"));
 
-  src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js",
-  ]).pipe(dest("./public/vendor/jquery"));
+  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./public/vendor/jquery"));
 
-  src(["./src/vendor/jquery-easing/*.js"])
-    .pipe(uglify())
-    .pipe(dest("./public/vendor/jquery-easing"));
+  src(["./src/vendor/jquery-easing/jquery.easing.min.js"]).pipe(uglify()).pipe(dest("./public/vendor/jquery-easing"));
 }
 
 function scss_compile() {
