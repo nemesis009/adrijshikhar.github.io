@@ -1,2 +1,8 @@
 node_modules
+src
+yarn.lock
 package-lock.json
+.dist
+dist
+.vscode
+public
