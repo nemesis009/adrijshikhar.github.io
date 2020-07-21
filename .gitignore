@@ -1,1 +1,10 @@
 node_modules
+src/vendor/bootstrap/
+src/vendor/jquery/
+src/vendor/fontawesome-free/
+yarn.lock
+package-lock.json
+.dist
+dist
+.vscode
+public
