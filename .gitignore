@@ -1,7 +1,5 @@
 node_modules
-src/vendor/bootstrap/
-src/vendor/jquery/
-src/vendor/fontawesome-free/
+src/vendor/
 yarn.lock
 package-lock.json
 .dist

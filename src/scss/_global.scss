@@ -2,6 +2,7 @@
 
 body {
   @include body-font;
+
   padding-top: 54px;
   color: $gray-600;
   font-size: $normalFontSize;
@@ -16,15 +17,16 @@ body {
 
 h1 {
   @include heading-font;
+
   text-transform: uppercase;
   color: $gray-900;
   font-weight: 600;
-
   font-size: $normalFontSize * 3;
 }
 
 h2 {
   @include heading-font;
+
   text-transform: uppercase;
   color: $gray-800;
   font-weight: 600;
@@ -33,6 +35,7 @@ h2 {
 
 h3 {
   @include subheading-font;
+
   color: $gray-700;
   font-weight: 600;
   font-size: $normalFontSize * 1.2;
@@ -40,13 +43,16 @@ h3 {
 
 h4 {
   @include body-font;
+
   color: $gray-600;
   font-size: $normalFontSize * 1.1;
 }
 
 .subheading {
   font-weight: 500;
+
   @include subtitle-font;
+
   font-size: $normalFontSize * 0.8;
 }
 
@@ -63,6 +69,12 @@ p.lead {
 
 .social-icons {
   .icon {
+    .svg-icon {
+      color: white;
+      height: 2rem;
+      width: 2rem;
+    }
+
     border: 0;
     display: inline-block;
     height: 3.5rem;
@@ -99,9 +111,11 @@ p.lead {
     flex-direction: row;
     align-items: center;
   }
+
   font-size: 3rem;
   display: flex;
   flex-direction: row;
+
   img,
   svg {
     width: 3rem;
@@ -111,6 +125,7 @@ p.lead {
   .list-item {
     width: fit-content;
     margin-right: $gutterWidth;
+
     &:hover,
     svg:hover .icon,
     img:hover .icon {
@@ -155,6 +170,7 @@ p.lead {
 
   .tooltip-inner {
     @include body-font;
+
     font-size: $normalFontSize;
     color: white;
     background-color: $primary;
