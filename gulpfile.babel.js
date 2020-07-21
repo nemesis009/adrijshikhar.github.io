@@ -7,14 +7,14 @@ import log from "fancy-log";
 let browserSync = require("browser-sync").create();
 
 function img_copy() {
-  src(["src/img/*"]).pipe(dest("./public/img"));
+  src(["src/img/*"]).pipe(dest("./dist/img"));
 }
 
 function fonts_copy() {
-  src(["src/fonts/*"]).pipe(dest("./public/fonts"));
+  src(["src/fonts/*"]).pipe(dest("./dist/fonts"));
 }
 function assets_copy() {
-  src(["src/assets/*"]).pipe(dest("./public/assets"));
+  src(["src/assets/*"]).pipe(dest("./dist/assets"));
 }
 
 function vendor() {
@@ -24,29 +24,22 @@ function vendor() {
     "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
   ]).pipe(dest("./src/vendor/bootstrap"));
   src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./src/vendor"));
-  src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js",
-  ]).pipe(dest("./src/vendor/jquery"));
+  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./src/vendor/jquery"));
 }
+src(["./node_modules/jquery.easing/*js"]).pipe(dest("./src/vendor/jquery-easing"));
 
 function vendor_minify() {
   src([
     "./node_modules/bootstrap/dist/**/*",
     "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
     "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
-  ]).pipe(dest("./public/vendor/bootstrap"));
+  ]).pipe(dest("./dist/vendor/bootstrap"));
 
-  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./public/vendor"));
+  src(["./node_modules/@fortawesome/**/*"]).pipe(dest("./dist/vendor"));
 
-  src([
-    "./node_modules/jquery/dist/*",
-    "!./node_modules/jquery/dist/core.js",
-  ]).pipe(dest("./public/vendor/jquery"));
+  src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./dist/vendor/jquery"));
 
-  src(["./src/vendor/jquery-easing/*.js"])
-    .pipe(uglify())
-    .pipe(dest("./public/vendor/jquery-easing"));
+  src(["./src/vendor/jquery-easing/*.js"]).pipe(uglify()).pipe(dest("./dist/vendor/jquery-easing"));
 }
 
 function scss_compile() {
@@ -62,15 +55,15 @@ function scss_compile() {
 }
 
 function minify_css() {
-  return src(["./src/css/*.css"]).pipe(cleanCSS()).pipe(dest("./public/css"));
+  return src(["./src/css/*.css"]).pipe(cleanCSS()).pipe(dest("./dist/css"));
 }
 
 function minify_js() {
-  return src(["./src/js/*"]).pipe(uglify()).pipe(dest("./public/js"));
+  return src(["./src/js/*"]).pipe(uglify()).pipe(dest("./dist/js"));
 }
 
 function html() {
-  src(["./src/*.html"]).pipe(dest("./public/"));
+  src(["./src/*.html"]).pipe(dest("./dist/"));
 }
 
 function dev() {
