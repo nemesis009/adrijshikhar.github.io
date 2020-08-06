@@ -39,7 +39,7 @@ function vendor_minify() {
 
   src(["./node_modules/jquery/dist/*", "!./node_modules/jquery/dist/core.js"]).pipe(dest("./public/vendor/jquery"));
 
-  src(["./src/vendor/jquery-easing/jquery.easing.min.js"]).pipe(uglify()).pipe(dest("./public/vendor/jquery-easing"));
+  src(["./node_modules/jquery.easing/jquery.easing.min.js"]).pipe(uglify()).pipe(dest("./public/vendor/jquery-easing"));
 }
 
 function scss_compile() {
