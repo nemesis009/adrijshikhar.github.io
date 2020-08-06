@@ -7,8 +7,6 @@ name: Build and Deploy
 on:
   push:
     branches: [ content ]
-  pull_request:
-    branches: [ content ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
