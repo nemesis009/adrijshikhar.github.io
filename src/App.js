@@ -1,5 +1,11 @@
 import { Component } from 'inferno';
-import { SideNavigationBar, Home, About, Education } from './components';
+import {
+  SideNavigationBar,
+  Home,
+  About,
+  Education,
+  Skills,
+} from './components';
 class App extends Component {
   render() {
     return (
@@ -9,6 +15,8 @@ class App extends Component {
           <About />
           <hr class="m-0" />
           <Education />
+          <hr class="m-0" />
+          <Skills />
         </Home>
       </div>
     );
