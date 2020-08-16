@@ -2,6 +2,7 @@ import { render } from 'inferno';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.scss';
 
 render(<App />, document.getElementById('root'));
 
