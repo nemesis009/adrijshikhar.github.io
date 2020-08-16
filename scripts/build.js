@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict';
 
 // Do this as the first thing so that any code reading it knows the right env.
@@ -72,14 +73,14 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log(chalk.yellow('Compiled with warnings.\n'));
         console.log(warnings.join('\n\n'));
         console.log(
-          '\nSearch for the ' +
-            chalk.underline(chalk.yellow('keywords')) +
-            ' to learn more about each warning.'
+          `\nSearch for the ${ 
+            chalk.underline(chalk.yellow('keywords')) 
+            } to learn more about each warning.`
         );
         console.log(
-          'To ignore, add ' +
-            chalk.cyan('// eslint-disable-next-line') +
-            ' to the line before.\n'
+          `To ignore, add ${ 
+            chalk.cyan('// eslint-disable-next-line') 
+            } to the line before.\n`
         );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
@@ -171,7 +172,7 @@ function build(previousFileSizes) {
       };
       if (writeStatsJson) {
         return bfj
-          .write(paths.appBuild + '/bundle-stats.json', stats.toJson())
+          .write(`${paths.appBuild  }/bundle-stats.json`, stats.toJson())
           .then(() => resolve(resolveArgs))
           .catch(error => reject(new Error(error)));
       }
