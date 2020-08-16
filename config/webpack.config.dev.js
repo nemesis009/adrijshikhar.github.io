@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const webpack = require('webpack');
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
@@ -13,7 +11,6 @@ const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleNotFoundPlugin = require('inferno-dev-utils/ModuleNotFoundPlugin');
-
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -102,25 +99,13 @@ module.exports = {
     // containing code from all our entry points, and the Webpack runtime.
     filename: 'static/js/bundle.js',
     // There are also additional JS chunk files if you use code splitting.
-    chunkFilename: 'static/js/[name].chunk.js',
     // This is the URL that app is served from. We use "/" in development.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
   },
-  optimization: {
-    // Automatically split vendor and commons
-    // https://twitter.com/wSokra/status/969633336732905474
-    // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
-    splitChunks: {
-      chunks: 'all',
-      name: false,
-    },
-    // Keep the runtime chunk seperated to enable long term caching
-    // https://twitter.com/wSokra/status/969679223278505985
-    runtimeChunk: true,
-  },
+
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
     // We placed these paths second because we want `node_modules` to "win"
@@ -193,7 +178,6 @@ module.exports = {
             options: {
               formatter: require.resolve('inferno-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -226,7 +210,7 @@ module.exports = {
               customize: require.resolve(
                 'babel-preset-inferno-app/webpack-overrides'
               ),
-              
+
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -254,7 +238,7 @@ module.exports = {
               cacheDirectory: true,
               // Don't waste time on Gzipping the cache
               cacheCompression: false,
-              
+
               // If an error happens in a package, it's possible to be
               // because it was compiled. Thus, we don't want the browser
               // debugger to show the original code. Instead, the code
@@ -333,7 +317,7 @@ module.exports = {
   plugins: [
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
-      inject: true,
+      inject: false,
       template: paths.appHtml,
     }),
     // Makes some environment variables available in index.html.
