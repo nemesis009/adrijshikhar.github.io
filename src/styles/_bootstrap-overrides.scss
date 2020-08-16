@@ -1,6 +1,7 @@
 body {
   list-style: none;
 }
+
 .bg-primary {
   background-color: $primary !important;
 }
@@ -11,9 +12,14 @@ body {
 
 a {
   color: $primary;
+
   &:hover,
   &:focus,
   &:active {
     color: darken($primary, 15%);
   }
+}
+
+.container {
+  padding: 0 !important;
 }
