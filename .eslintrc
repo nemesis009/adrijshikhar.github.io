@@ -21,12 +21,7 @@
     "node": true,
     "jquery": true
   },
-  "ignorePatterns": [
-    "dist/",
-    "node_modules/",
-    "src/vendor",
-    "*.html"
-  ],
+  "ignorePatterns": ["build/", "node_modules/", "public"],
   "rules": {
     "no-empty": 0,
     "array-bracket-spacing": [
