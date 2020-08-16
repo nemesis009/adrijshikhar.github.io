@@ -1,9 +1,5 @@
 node_modules
-src/vendor/
-yarn.lock
-package-lock.json
 .dist
 dist
 .vscode
-public
 build
