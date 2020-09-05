@@ -4,3 +4,5 @@ dist
 .vscode
 build
 package-lock.json
+
+.env
