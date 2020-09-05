@@ -7,6 +7,7 @@ import {
   Skills,
   Experience,
   Projects,
+  Interests,
 } from './components';
 class App extends Component {
   render() {
@@ -23,6 +24,8 @@ class App extends Component {
           <Experience />
           <hr class="m-0" />
           <Projects />
+          <hr class="m-0" />
+          <Interests />
         </Home>
       </div>
     );
