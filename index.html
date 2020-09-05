@@ -2,7 +2,24 @@
 <html lang="en">
 
   <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
     <meta charset="utf-8">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -14,542 +31,35 @@
     <meta property="og:title" content="Resume - Adrij Shikhar" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://adrijshikhar.github.io/" />
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      crossorigin="anonymous">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <link href="css/resume.css" rel="stylesheet">
     <title>Resume - Adrij Shikhar</title>
-
   </head>
 
-  <body id="page-top">
+  <body>
+    <div id="root"></div>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">ADRIJ SHIKHAR</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpeg" alt="" />
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/assets/resume.pdf">Resume</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-4">
-            Adrij
-            <span class="text-primary">Shikhar</span>
-          </h1>
-          <p class="lead mb-5">I am a 21-year-old pre final currently enrolled in Chemical Engineering at IIT Roorkee,
-            India. I developed a passion for development at very early stages of my life and since then most of my time
-            goes into reading and writing software.</p>
-          <div class="social-icons">
-            <a class="icon" href="https://www.linkedin.com/in/adrij-shikhar-460a89111/" target="_blank"
-              rel="noreferrer noopener">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="icon" href="https://github.com/adrijshikhar/" target="_blank" rel="noreferrer noopener">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="icon" href="https://dev.to/adrijshikhar" target="_blank" rel="noreferrer noopener">
-              <i class="fab fa-dev" title="adrijshikhar's DEV Profile"></i>
-            </a>
-            <a class="icon" href="mailto:ashikhar@ee.iitr.ac.in" target="_blank" rel="noreferrer noopener">
-              <i class="fa fa-envelope"></i>
-            </a>
-            <a class="icon" href="https://sourcerer.io/adrijshikhar">
-              <svg class="svg-icon" width="32" height="41" viewBox="0 0 32 41">
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M10.1653 38.0926C10.1653 38.8926 10.3653 39.2926 10.8653 39.2926C11.2653 39.2926 11.4653 38.8926 11.4653 38.0926C11.4653 37.2926 11.2653 36.9926 10.8653 36.9926C10.3653 36.9926 10.1653 37.2926 10.1653 38.0926ZM10.8653 40.0926C9.86533 40.0926 9.46533 39.4926 9.46533 38.1926C9.46533 36.9926 9.96533 36.3926 10.8653 36.3926C11.7653 36.3926 12.1653 36.9926 12.1653 38.1926C12.1653 39.3926 11.3653 40.0926 10.4653 40.0926"
-                    fill="white" />
-                  <path d="M6.16553 39.8925V39.7925L10.2655 33.2925H10.9655L6.96553 39.8925H6.26553" fill="white" />
-                  <path
-                    d="M5.86514 34.9924C5.86514 35.7924 6.06514 36.1924 6.56514 36.1924C6.96514 36.1924 7.16514 35.7924 7.16514 34.9924C7.26514 34.1924 7.06514 33.8924 6.66514 33.8924C6.16514 33.8924 5.96514 34.0924 5.96514 34.9924H5.86514ZM5.26514 35.0924C5.26514 33.7924 5.76514 33.1924 6.66514 33.1924C7.46514 33.1924 7.96514 33.7924 7.96514 34.9924C7.96514 36.2924 7.46514 36.8924 6.66514 36.8924C5.66514 36.8924 5.26514 36.2924 5.26514 34.9924"
-                    fill="white" />
-                  <path d="M4.82812 26.8926V25.8926H5.82812V26.8926H4.82812Z" fill="white" />
-                  <path
-                    d="M1.12842 28.3926V27.7926H2.12842V26.9926C2.12842 26.2926 2.62842 25.8926 3.52842 25.8926H4.12842V26.6926H3.52842L3.22842 26.7926L3.12842 27.1926V27.6926H5.62842V32.4926H4.82842V28.4926H3.12842V32.4926H2.22842V28.4926H1.12842V28.3926ZM31.9284 29.2926C31.9284 27.2926 30.5284 25.8926 28.7284 25.8926C27.8532 25.8926 27.0138 26.2403 26.395 26.8591C25.7761 27.478 25.4284 28.3174 25.4284 29.1926C25.4362 30.0654 25.7864 30.9002 26.4036 31.5174C27.0208 32.1346 27.8556 32.4847 28.7284 32.4926C30.5284 32.4926 31.9284 30.9926 31.9284 29.1926V29.2926ZM16.4284 33.1926C15.5532 33.1926 14.7138 33.5403 14.095 34.1591C13.4761 34.778 13.1284 35.6174 13.1284 36.4926C13.1362 37.3654 13.4864 38.2002 14.1036 38.8174C14.7208 39.4346 15.5556 39.7848 16.4284 39.7926C18.2284 39.7926 19.6284 38.2926 19.6284 36.4926C19.6284 34.6926 18.2284 33.1926 16.4284 33.1926ZM16.4284 33.9926C17.7284 33.9926 18.8284 35.0926 18.8284 36.4926C18.8284 37.8926 17.8284 38.9926 16.4284 38.9926C15.7654 38.9926 15.1295 38.7292 14.6607 38.2603C14.1918 37.7915 13.9284 37.1556 13.9284 36.4926C13.9284 35.0926 15.0284 33.9926 16.4284 33.9926Z"
-                    fill="white" />
-                  <path
-                    d="M2.61878 18L4.31878 19.4C6.55738 20.4295 8.90581 21.2012 11.3188 21.7L13.7188 22L16.0188 22.3C16.7183 22.4035 17.4183 22.5035 18.1188 22.6L19.3188 22.8C20.1323 22.9414 20.9344 23.142 21.7188 23.4C22.6934 23.6302 23.5901 24.113 24.3188 24.8H32.0188L31.7188 23.8C30.7188 20.8 28.3188 18.7 24.3188 17.5C21.1951 16.737 18.0201 16.2023 14.8188 15.9L13.2188 15.6L12.0188 15.4L10.8188 15.2L9.41878 14.6L8.11878 13.8C7.79127 13.4817 7.52069 13.1097 7.31878 12.7L7.01878 11.2C7.01878 9.9 7.71878 8.8 9.01878 7.8C10.4188 6.8 12.4188 6.3 15.0188 6.3C17.9188 6.3 20.2188 7 21.8188 8.2C22.5916 8.77881 23.2134 9.53558 23.6312 10.4061C24.049 11.2765 24.2506 12.235 24.2188 13.2C24.2188 13.4 24.2188 13.5 24.5188 13.5H31.0188C31.2188 13.5 31.2188 13.5 31.2188 13.2C31.2982 10.6547 30.5792 8.14828 29.1625 6.03217C27.7458 3.91606 25.7024 2.29632 23.3188 1.4C20.8188 0.4 18.1188 0 15.0188 0C10.5188 0 6.91878 1 4.01878 3.2C2.74058 4.10368 1.70006 5.30328 0.986104 6.69638C0.272144 8.08947 -0.0940533 9.63466 -0.0812168 11.2C-0.0818488 12.9381 0.329386 14.6515 1.11878 16.2C1.41878 16.8 1.91878 17.4 2.51878 18L2.61878 18Z"
-                    fill="white" />
-                  <path d="M20.3281 40.2011H26.9281V33.6011H20.3281V40.2011Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="32" height="41" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-            <a class="icon" href="https://www.facebook.com/adrij.shikhar" target="_blank" rel="noreferrer noopener">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <button type="button" id="mobile-tooltip" class="icon fa fa-mobile" data-toggle="tooltip"
-              data-placement="right" title="+91 (821) 805-8928"></button>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Indian Institute of Technology, Roorkee</h3>
-              <div class="subheading mb-3">Bachelor of technology</div>
-              <p class="para-content">Chemical Engineering</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Jul 2018 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Gulab Rai Montessori</h3>
-              <div class="subheading mb-3">PCM with Computer Science</div>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Apr 2015 - Mar 2017</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <h4 class="mb-3">Development Environment</h4>
-          <ul class="fa-ul mb-4">
-            <li><i class="fa-li fa fa-check"></i> Manjaro i3wm Community Edition</li>
-            <li><i class="fa-li fa fa-check"></i> Highly customized VS Code with self crafted theme </li>
-            <li><i class="fa-li fa fa-check"></i> Bash, Oh My Zsh</li>
-          </ul>
-
-          <h4 class="mb-3">Frameworks & Tools</h4>
-          <div class="dev-icons mb-3">
-
-            <div class="list-item">
-              <i class="fab fa-js-square"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-react"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-node-js"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-github"></i>
-            </div>
-            <div class="list-item">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 172 172">
-                <g transform="translate(-25.8,-25.8) scale(1.2,1.2)">
-                  <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                    style="mix-blend-mode: normal">
-                    <path d="M0,172v-172h172v172z" fill="none"></path>
-                    <g fill="#868e96">
-                      <path class="icon"
-                        d="M21.5,35.83333v100.33333c0,7.91917 6.41417,14.33333 14.33333,14.33333h100.33333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-100.33333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333h-100.33333c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333zM97.93967,89.23217h-15.179v46.9345h-12.2335v-46.9345h-14.86367v-10.39883h42.27617zM100.319,133.48633v-12.54883c0,0 6.85133,5.16717 15.07867,5.16717c8.22733,0 7.90483,-5.375 7.90483,-6.11317c0,-7.8045 -23.29883,-7.8045 -23.29883,-25.0905c0,-23.51383 33.9485,-14.233 33.9485,-14.233l-0.42283,11.17283c0,0 -5.69033,-3.79833 -12.126,-3.79833c-6.4285,0 -8.7505,3.06017 -8.7505,6.32817c0,8.43517 23.51383,7.5895 23.51383,24.56733c0,26.144 -35.84767,14.54833 -35.84767,14.54833z">
-                      </path>
-                    </g>
-                    <path d="" fill="none"></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="list-item">
-              <svg version="1.1" viewBox="0 0 226 226">
-                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                  style="mix-blend-mode: normal">
-                  <path d="M0,226v-226h226v226z" fill="none"></path>
-                  <g>
-                    <path class="icon" d="M122.41667,18.83333l-94.16667,94.16667l28.25,28.25l122.41667,-122.41667z"
-                      fill="#868e96"></path>
-                    <path class="icon" d="M178.91667,103.58333l-51.79167,51.79167l-28.25,-28.25l23.54167,-23.54167z"
-                      fill="#868e96"></path>
-                    <rect class="icon" x="-12.72895" y="33.94062" transform="rotate(-45.001) scale(4.70833,4.70833)"
-                      width="8.485" height="8.485" fill="#484848"></rect>
-                    <path class="icon" d="M178.91667,207.16667h-56.5l-23.54167,-23.54167l28.25,-28.25z" fill="#666666">
-                    </path>
-                    <path class="icon" d="M98.875,183.625l42.375,-14.125l-14.125,-14.125z" fill="#333333"></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-
-            <div class="list-item">
-              <svg viewBox="0 0 128 128">
-                <path class="icon" fill="#868e96"
-                  d="M108.2 64.8c-.1-.1-.2-.2-.4-.2l-.1-.1c-.1-.1-.2-.1-.2-.2l-.1-.1c-.1 0-.2-.1-.2-.1l-.2-.1c-.1 0-.2-.1-.2-.1l-.2-.1c-.1 0-.2-.1-.2-.1-.1 0-.1 0-.2-.1l-.3-.1c-.1 0-.1 0-.2-.1l-.3-.1h-.1l-.4-.1h-.2c-.1 0-.2 0-.3-.1h-2.3c-.6-13.3.6-26.8-2.8-39.6 12.9-4.6 2.8-22.3-8.4-14.4-7.4-6.4-17.6-7.8-28.3-7.8-10.5.7-20.4 2.9-27.4 8.4-2.8-1.4-5.5-1.8-7.9-1.1v.1c-.1 0-.3.1-.4.2-.1 0-.3.1-.4.2h-.1c-.1 0-.2.1-.4.2h-.1l-.3.2h-.1l-.3.2h-.1l-.3.2s-.1 0-.1.1l-.3.2s-.1 0-.1.1l-.3.2s-.1 0-.1.1l-.3.2-.1.1c-.1.1-.2.1-.2.2l-.1.1-.2.2-.1.1c-.1.1-.1.2-.2.2l-.1.1c-.1.1-.1.2-.2.2l-.1.1c-.1.1-.1.2-.2.2l-.1.1c-.1.1-.1.2-.2.2l-.1.1c-.1.1-.1.2-.2.2l-.1.1-.1.3s0 .1-.1.1l-.1.3s0 .1-.1.1l-.1.3s0 .1-.1.1l-.1.3s0 .1-.1.1c.4.3.4.4.4.4v.1l-.1.3v.1c0 .1 0 .2-.1.3v3.1c0 .1 0 .2.1.3v.1l.1.3v.1l.1.3s0 .1.1.1l.1.3s0 .1.1.1l.1.3s0 .1.1.1l.2.3s0 .1.1.1l.2.3s0 .1.1.1l.2.3.1.1.3.3.3.3h.1c1 .9 2 1.6 4 2.2v-.2c-4.2 12.6-.7 25.3-.5 38.3-.6 0-.7.4-1.7.5h-.5c-.1 0-.3 0-.5.1-.1 0-.3 0-.4.1l-.4.1h-.1l-.4.1h-.1l-.3.1h-.1l-.3.1s-.1 0-.1.1l-.3.1-.2.1c-.1 0-.2.1-.2.1l-.2.1-.2.1c-.1 0-.2.1-.2.1l-.2.1-.4.3c-.1.1-.2.2-.3.2l-.4.4-.1.1c-.1.2-.3.4-.4.5l-.2.3-.3.6-.1.3v.3c0 .5.2.9.9 1.2.2 3.7 3.9 2 5.6.8l.1-.1c.2-.2.5-.3.6-.3h.1l.2-.1c.1 0 .1 0 .2-.1.2-.1.4-.1.5-.2.1 0 .1-.1.1-.2l.1-.1c.1-.2.2-.6.2-1.2l.1-1.3v1.8c-.5 13.1-4 30.7 3.3 42.5 1.3 2.1 2.9 3.9 4.7 5.4h-.5c-.2.2-.5.4-.8.6l-.9.6-.3.2-.6.4-.9.7-1.1 1c-.2.2-.3.4-.4.5l-.4.6-.2.3c-.1.2-.2.4-.2.6l-.1.3c-.2.8 0 1.7.6 2.7l.4.4h.2c.1 0 .2 0 .4.1.2.4 1.2 2.5 3.9.9 2.8-1.5 4.7-4.6 8.1-5.1l-.5-.6c5.9 2.8 12.8 4 19 4.2 8.7.3 18.6-.9 26.5-5.2 2.2.7 3.9 3.9 5.8 5.4l.1.1.1.1.1.1.1.1s.1 0 .1.1c0 0 .1 0 .1.1 0 0 .1 0 .1.1h2.1000000000000005s.1 0 .1-.1h.1s.1 0 .1-.1h.1s.1 0 .1-.1c0 0 .1 0 .1-.1l.1-.1s.1 0 .1-.1l.1-.1h.1l.2-.2.2-.1h.1l.1-.1h.1l.1-.1.1-.1.1-.1.1-.1.1-.1.1-.1.1-.1v-.1s0-.1.1-.1v-.1s0-.1.1-.1v-.1s0-.1.1-.1v-1.4000000000000001s-.3 0-.3-.1l-.3-.1v-.1l.3-.1s.2 0 .2-.1l.1-.1v-2.1000000000000005s0-.1-.1-.1v-.1s0-.1-.1-.1v-.1s0-.1-.1-.1c0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1 0 0 0-.1-.1-.1l-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1v-.1l-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1-.1c2-1.9 3.8-4.2 5.1-6.9 5.9-11.8 4.9-26.2 4.1-39.2h.1c.1 0 .2.1.2.1h.30000000000000004s.1 0 .1.1h.1s.1 0 .1.1l.2.1c1.7 1.2 5.4 2.9 5.6-.8 1.6.6-.3-1.8-1.3-2.5zm-72.2-41.8c-3.2-16 22.4-19 23.3-3.4.8 13-20 16.3-23.3 3.4zm36.1 15c-1.3 1.4-2.7 1.2-4.1.7 0 1.9.4 3.9.1 5.9-.5.9-1.5 1-2.3 1.4-1.2-.2-2.1-.9-2.6-2l-.2-.1c-3.9 5.2-6.3-1.1-5.2-5-1.2.1-2.2-.2-3-1.5-1.4-2.6.7-5.8 3.4-6.3.7 3 8.7 2.6 10.1-.2 3.1 1.5 6.5 4.3 3.8 7.1zm-7-17.5c-.9-13.8 20.3-17.5 23.4-4 3.5 15-20.8 18.9-23.4 4zM41.7 17c-1.9 0-3.5 1.7-3.5 3.8 0 2.1 1.6 3.8 3.5 3.8s3.5-1.7 3.5-3.8c0-2.1-1.5-3.8-3.5-3.8zm1.6 5.7c-.5 0-.8-.4-.8-1 0-.5.4-1 .8-1 .5 0 .8.4.8 1 0 .5-.3 1-.8 1zM71.1 16.1c-1.9 0-3.4 1.7-3.4 3.8 0 2.1 1.5 3.8 3.4 3.8s3.4-1.7 3.4-3.8c0-2.1-1.5-3.8-3.4-3.8zm1.6 5.6c-.4 0-.8-.4-.8-1 0-.5.4-1 .8-1s.8.4.8 1-.4 1-.8 1z">
-                </path>
-              </svg>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-sass"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-less"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-gulp"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-grunt"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-npm"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-html5"></i>
-            </div>
-            <div class="list-item">
-              <i class="fab fa-css3-alt"></i>
-            </div>
-          </div>
-          <h4 class="mb-3">And More...</h4>
-
-          <div class="fa-ul mb-0">
-            <li><i class="fa-li fa fa-check"></i> Redux</li>
-            <li><i class="fa-li fa fa-check"></i> Dartlang</li>
-            <li><i class="fa-li fa fa-check"></i> MongoDB</li>
-            <li><i class="fa-li fa fa-check"></i> Java</li>
-            <li><i class="fa-li fa fa-check"></i> PHP</li>
-            <li><i class="fa-li fa fa-check"></i> C++</li>
-            <li><i class="fa-li fa fa-check"></i> SQL</li>
-            <li><i class="fa-li fa fa-check"></i> MySQL</li>
-            <li><i class="fa-li fa fa-check"></i> PostgreSQL</li>
-            <li><i class="fa-li fa fa-check"></i> Git</li>
-            <li><i class="fa-li fa fa-check"></i> Linux</li>
-            <li><i class="fa-li fa fa-check"></i> Java Server Pages</li>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Experience</h2>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Software Engineering Intern | Powerplay</h3>
-              <div class="subheading mb-3">Bangalore</div>
-              <p class="para-content">Helping construction contractors track realtime on-site progress</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Apr 2020 - Jun 2020</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Executive Member | SDSLabs</h3>
-              <div class="subheading mb-3">IIT Roorkee</div>
-              <p class="para-content">Think. Build. Ship</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Jan 2019 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Manager | Entrepreneurship Cell</h3>
-              <div class="subheading mb-3">IIT Roorkee</div>
-              <p class="para-content">#inspiringinnovation</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Feb 2019 - Feb 2020</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Web Developer | Cognizance</h3>
-              <div class="subheading mb-3">IIT Roorkee</div>
-              <p class="para-content">Tech Fest</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Dec 2018 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Senior Member | XDA Developers</h3>
-              <div class="subheading mb-3">JB Online Media, LLC</div>
-              <p class="para-content">Android Community</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Feb 2015 - Present</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-        <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Hidden Stone</h3>
-              <div class="subheading mb-3">Utthan Foundation Trust</div>
-              <p class="para-content">The trust is working to train the village as well as urban downtrodden people of
-                the
-                society.</p>
-              <p class="para-content">
-                I lead a team of four, from design to development cycle and established using ReactJS and Redux for
-                state management.
-                Worked on wrappers to extend the functionalities of libraries used, such as material ui.
-                Integrated Google Sheets API for newsletter and donation information.
-              </p>
-              <p class="para-content">The backend data is been handled by Google Sheets API</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Dec 2018 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Cerebro</h3>
-              <div class="subheading mb-3"></div>
-              <p class="para-content">Cerebro, a platform for hosting data hackathons exclusively in IITR developed by
-                SDSLabs. It's challenges and competitions are maintained by members of SDSLabs and Data Science Group.
-              </p>
-
-              <p class="para-content">
-                Implemented Admin Panel to host and manage machine learning competitions with submissions and managing
-                posts.</p>
-              <p class="para-content">
-                Worked on additional features such as edit post and lazy loading of news feed.
-                Built on Open source PHP framework, Laravel with frontend SPA client in ReactJS and Redux.
-              </p>
-              <p class="para-content"> For more details, check out the <a
-                  href="https://blog.sdslabs.co/2018/12/cerebro">blog
-                  post</a> on Cerebro.</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Apr 2019 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Accounts</h3>
-              <div class="subheading mb-3">SDSLabs</div>
-              <p class="para-content"> It is an indigenous multi-provider authentication framework based on OAuth-2.
-                It comprises of two standalone authentication and resource server.
-              </p>
-              <p class="para-content">
-                Worked on improving the OAuth flow and containerising the applications for better stability and scaling.
-                <br />
-                Worked on additional features such as server-side redis caching.
-              </p>
-
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">27 Jun 2020 - 28 Jun 2020</span>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Covid 19 Tracker</h3>
-              <div class="subheading mb-3">SDSLabs</div>
-              <p class="para-content">A cross platform application to track Covid-19 activities, based on Flutter
-                framework.</p>
-              <p class="para-content">Integrated maps sdk to pinpoint data for convenient visual understanding across
-                India.
-                <br />
-                Lead the effort to introduce Government Protocols to be followed to prevent spreading of the
-                same.</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">1 Apr 2020 - Present</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Kill-Zee</h3>
-              <div class="subheading mb-3">Global Game Jam</div>
-              <p class="para-content">A small tactical game in Lua to kill zombies and protect your tower before its too
-                late.</p>
-              <p class="para-content">Spearheaded and implemented the underlying core features and worked on performance
-                optimization.</p>
-
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">29 Jan 2020 - 31 Jan 2020</span>
-            </div>
-          </div>
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">DarkDev</h3>
-              <div class="subheading mb-3">SDSLabs</div>
-              <p class="para-content"> A self crafted VS Code Theme, for those who like it in dark mode.</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">1 Apr 2020 - Present</span>
-            </div>
-          </div>
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Vega VS Code Extension</h3>
-              <div class="subheading mb-3">Major League Hacking</div>
-              <p class="para-content"> MLH and Microsoft joined forces to host a hackathon for building new and
-                improving existing coding tools.
-              </p>
-              <p class="para-content">
-                Integrated Vega charting library to VSCode, to generate charts and diagrams on the go.
-                <br />
-                It reads the config from the JSON schema and shows the output in the Web View of VSCode</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">27 Jun 2020 - 28 Jun 2020</span>
-            </div>
-          </div>
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">E-Summit PWA </h3>
-              <div class="subheading mb-3">IIT Roorkee</div>
-              <p class="para-content">E-Summit is an event held to exhibit the entrepreneurial talent and creativity
-                through many competitions like business ventures, product design competition, etc.</p>
-              <p class="para-content">Developed core pipeline and worked on optimizing user experience.
-                <br />
-                Spearheaded the development of user interface and the flow of login & registration forms</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Jan 2019 - Present</span>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">Cognizance</h3>
-              <div class="subheading mb-3">IIT Roorkee</div>
-              <p class="para-content">Cognizance is the Tech Fest organized by IIT Roorkee. It is a prgressive web app
-                with conceptualized the ER Diagram and implemented the relational database in PSQL. The frontend is in
-                ReactJS and Express framework on NodeJs is used for backend, and Redis for caching.</p>
-              <p class="para-content">
-                Ported the legacy code from webpack v2 to webpack v4 and restructured the dependencies. Worked alongside
-                design team for faster and better development cycle for user interface
-              </p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Jan 2019 - Present</span>
-            </div>
-          </div>
-
-
-          <div class="resume-item d-flex justify-content-between mb-5">
-
-            <div class="resume-content mr-3 ">
-              <h3 class="mb-0">evem</h3>
-              <div class="subheading mb-3">SDSWoC</div>
-              <p class="para-content">A website that provides information regarding the bookings of the venues of IIT
-                Roorkee. and gives you a centralized system to book the venue for certain events.</p>
-              <p class="para-content">Students can login, mark the interested events and get a personalized calendar.
-                The
-                organizers can login, check the availability of the venues.</p>
-              <p class="para-content">Simple HTML/CSS, JavaScript, Bootstrap4 used for frontend and PHP, MySQL for
-                backend.</p>
-            </div>
-            <div class="resume-date px-4">
-              <span class="text-primary">Feb 2015 - Present</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p class="para-content">
-            I try to make the most out of my time by exploring the latest technological advancements. Apart from
-            being a tech enthusiast, I enjoy most of my time playing
-            guitar. I have an OCD for music and love to have a sorted music
-            library.
-          </p>
-          <p class="para-content">
-            When forced indoors, I follow a number of sci-fi genre movies and
-            television shows and a large amount of my free time exploring new 
-            advancements in every field. Some of my time is invested in learning
-            how our brain functions.
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/static/js/bundle.js"></script>
     <script src="js/resume.js"></script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
 
   </body>
 
