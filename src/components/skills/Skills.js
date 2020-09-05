@@ -67,6 +67,9 @@ const Skills = () => {
             </svg>
           </div>
           <div class="list-item">
+            <i class="fab fa-docker"></i>
+          </div>
+          <div class="list-item">
             <svg version="1.1" viewBox="0 0 226 226">
               <g
                 fill="none"

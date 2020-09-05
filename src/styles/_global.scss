@@ -115,6 +115,7 @@ p.lead {
   font-size: 3rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   img,
   svg {
