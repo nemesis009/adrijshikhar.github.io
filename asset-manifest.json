@@ -1,0 +1,18 @@
+{
+  "main.css": "/static/css/main.41cebe37.chunk.css",
+  "main.js": "/static/js/0.bundle.js",
+  "main.js.map": "/static/js/0.bundle.js.map",
+  "runtime~main.js": "/static/js/bundle.js",
+  "runtime~main.js.map": "/static/js/bundle.js.map",
+  "static/css/2.afc36f9d.chunk.css": "/static/css/2.afc36f9d.chunk.css",
+  "static/js/2.bundle.js": "/static/js/2.bundle.js",
+  "static/js/2.bundle.js.map": "/static/js/2.bundle.js.map",
+  "index.html": "/index.html",
+  "service-worker.js": "/service-worker.js",
+  "service-worker.js.map": "/service-worker.js.map",
+  "static/css/2.afc36f9d.chunk.css.map": "/static/css/2.afc36f9d.chunk.css.map",
+  "static/css/main.41cebe37.chunk.css.map": "/static/css/main.41cebe37.chunk.css.map",
+  "static/js/2.bundle.js.LICENSE.txt": "/static/js/2.bundle.js.LICENSE.txt",
+  "workbox-dce9cbc5.js": "/workbox-dce9cbc5.js",
+  "workbox-dce9cbc5.js.map": "/workbox-dce9cbc5.js.map"
+}
