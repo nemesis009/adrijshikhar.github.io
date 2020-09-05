@@ -1,4 +1,3 @@
-
 const path = require('path');
 const webpack = require('webpack');
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
@@ -16,7 +15,6 @@ const getCSSModuleLocalIdent = require('inferno-dev-utils/getCSSModuleLocalIdent
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('inferno-dev-utils/ModuleNotFoundPlugin');
-
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -266,7 +264,6 @@ module.exports = {
             options: {
               formatter: require.resolve('inferno-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -299,7 +296,7 @@ module.exports = {
               customize: require.resolve(
                 'babel-preset-inferno-app/webpack-overrides'
               ),
-              
+
               cacheDirectory: true,
               // Save disk space when time isn't as important
               cacheCompression: true,
@@ -325,7 +322,7 @@ module.exports = {
               cacheDirectory: true,
               // Save disk space when time isn't as important
               cacheCompression: true,
-              
+
               // If an error happens in a package, it's possible to be
               // because it was compiled. Thus, we don't want the browser
               // debugger to show the original code. Instead, the code
