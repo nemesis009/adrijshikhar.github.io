@@ -1,0 +1,18 @@
+{
+  "main.css": "/static/css/main.bb5b578d.chunk.css",
+  "main.js": "/static/js/main.bbd4e276.chunk.js",
+  "main.js.map": "/static/js/main.bbd4e276.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.efc27769.js",
+  "runtime~main.js.map": "/static/js/runtime~main.efc27769.js.map",
+  "static/css/2.c11e63b2.chunk.css": "/static/css/2.c11e63b2.chunk.css",
+  "static/js/2.da61a23b.chunk.js": "/static/js/2.da61a23b.chunk.js",
+  "static/js/2.da61a23b.chunk.js.map": "/static/js/2.da61a23b.chunk.js.map",
+  "index.html": "/index.html",
+  "service-worker.js": "/service-worker.js",
+  "service-worker.js.map": "/service-worker.js.map",
+  "static/css/2.c11e63b2.chunk.css.map": "/static/css/2.c11e63b2.chunk.css.map",
+  "static/css/main.bb5b578d.chunk.css.map": "/static/css/main.bb5b578d.chunk.css.map",
+  "static/js/2.da61a23b.chunk.js.LICENSE.txt": "/static/js/2.da61a23b.chunk.js.LICENSE.txt",
+  "workbox-dce9cbc5.js": "/workbox-dce9cbc5.js",
+  "workbox-dce9cbc5.js.map": "/workbox-dce9cbc5.js.map"
+}
