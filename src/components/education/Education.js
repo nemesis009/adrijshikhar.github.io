@@ -14,7 +14,7 @@ const Education = () => {
             <p class="para-content">Chemical Engineering</p>
           </div>
           <div class="resume-date px-4">
-            <span class="text-primary">Jul 2018 - Present</span>
+            <span class="text-primary">Jul 2018 - Jun 2022</span>
           </div>
         </div>
 
