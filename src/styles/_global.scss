@@ -69,6 +69,10 @@ p.lead {
 
 .social-icons {
   .icon {
+    @media (max-width: 992px) {
+      margin-bottom: 1rem;
+    }
+
     .svg-icon {
       color: white;
       height: 2rem;

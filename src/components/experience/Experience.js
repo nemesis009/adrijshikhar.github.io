@@ -43,11 +43,11 @@ const Experience = () => {
         </ExpCard>
 
         <ExpCard
-          postition="Developer | SDSLabs"
+          postition="Web Developer | Cognizance"
           location="IIT Roorkee"
-          date="Jan 2019 - Present"
+          date="Dec 2018 - Jan 2020"
         >
-          <p class="para-content">Android Community</p>
+          <p class="para-content">IIT Roorkee Tech Fest</p>
         </ExpCard>
       </div>
     </section>

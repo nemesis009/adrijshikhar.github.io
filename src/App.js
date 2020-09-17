@@ -1,4 +1,5 @@
 import { Component } from 'inferno';
+
 import {
   SideNavigationBar,
   Home,
@@ -9,7 +10,11 @@ import {
   Projects,
   Interests,
 } from './components';
+import { getUser } from './api/githubApi';
 class App extends Component {
+  componentWillMount() {
+    getUser('adrijshikhar');
+  }
   render() {
     return (
       <div id="page-top">
