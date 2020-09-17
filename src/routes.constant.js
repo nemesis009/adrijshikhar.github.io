@@ -1,7 +1,8 @@
-const GITHUB_API = {
-  headers: { Accept: 'application/vnd.github.v3+json' },
-  baseURL: 'https://api.github.com',
-  followers: '',
-};
+import config from './config';
 
-export default { GITHUB_API };
+export const GITHUB_ROUTES = {
+  headers: { Accept: 'application/vnd.github.v3+json' },
+  baseURL: config.github.baseURL,
+  user: username => `${config.github.baseURL}/users/${username}`,
+  followers: '/followers',
+};
