@@ -5663,23 +5663,42 @@ inferno-popper@^7.0.0:
     inferno-shared "^7.4.0"
     popper.js "^1.14.6"
 
-inferno-shared@7.4.2, inferno-shared@^7.3.3, inferno-shared@^7.4.0:
+inferno-shared@7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-7.4.2.tgz#400cf6d19a077af9e5e852e1f189726391efa273"
   integrity sha512-SULfgzj/PuyMd3rHThEXkeEdZorjcr/q+kaqbwr7C2XhIPCk4e5jcRKZujI6YCSahGA9WFwP2Mft1v5PsaaNeg==
 
-inferno-vnode-flags@7.4.2, inferno-vnode-flags@^7.3.3:
+inferno-shared@7.4.5, inferno-shared@^7.3.3, inferno-shared@^7.4.0:
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-7.4.5.tgz#0835819f47fe9e7f219e65f6d5976153e41b738c"
+  integrity sha512-jMI19wZN9kClOg+LLCzovcrHS1DPQagRaJQbPoZFzQxZLS8HejEd2gvYNbA/V7B0XmaNTezMZJnl1AcUOQC5kQ==
+
+inferno-vnode-flags@7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-7.4.2.tgz#54982dabe34f308853ba17de7de4241e23769135"
   integrity sha512-sV4KqqvZH4MW9/dNbC9blHInnpQSqMWouU5VlanbJ+NhJ8ufPwsDy0/+jiA2aODpg2HFHwVMJFF1fsewPqNtLQ==
 
-inferno@7.4.2, inferno@^7.3.3, inferno@^7.4.0, inferno@^7.4.2:
+inferno-vnode-flags@7.4.5, inferno-vnode-flags@^7.3.3:
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-7.4.5.tgz#9e49da71328c9146c386250f4f40c9d53746ca7d"
+  integrity sha512-BohIU7EW7I8yH/vgHAoYn06foIhl56pPN4J/DZ/bIseUmTG1mAzYZrhLc3qNZF6INgFQIAMcdpxdJKKEqjTl6w==
+
+inferno@7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/inferno/-/inferno-7.4.2.tgz#833cc423ee7b939fad705c59ea41924f31c92453"
   integrity sha512-RsmuN8F7lAWTTuy2juf3Tqn/BihkRNdy0WZN+vuyryuEySKHBA1fruyq6K0covF3Ja8mAdha5NNISZz9ltgcug==
   dependencies:
     inferno-shared "7.4.2"
     inferno-vnode-flags "7.4.2"
+    opencollective-postinstall "^2.0.2"
+
+inferno@^7.3.3, inferno@^7.4.0, inferno@^7.4.5:
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-7.4.5.tgz#3d751ac166fddc11d5abbf0baf5fc0ff6d68ca83"
+  integrity sha512-J/NnRqcucSaqUaOXy+RwojoOiEJE6QGAO0JyA4pyvv4t2e2NwLWGOP+5UR6ui6EvecbHoOAcu3SQVKwkL22TBg==
+  dependencies:
+    inferno-shared "7.4.5"
+    inferno-vnode-flags "7.4.5"
     opencollective-postinstall "^2.0.2"
 
 inflight@^1.0.4:
