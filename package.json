@@ -59,7 +59,7 @@
         "eslint-config-inferno-app": "^7.0.2",
         "eslint-loader": "4.0.2",
         "eslint-plugin-flowtype": "5.2.0",
-        "eslint-plugin-import": "2.22.0",
+        "eslint-plugin-import": "2.22.1",
         "eslint-plugin-inferno": "^7.20.1",
         "eslint-plugin-jsx-a11y": "6.3.1",
         "eslint-plugin-prettier": "^3.1.4",
