@@ -16,7 +16,7 @@
         "babel-loader": "8.1.0",
         "babel-preset-inferno-app": "^8.0.3",
         "bfj": "7.0.2",
-        "bootstrap": "4",
+        "bootstrap": ">=4.3.1",
         "case-sensitive-paths-webpack-plugin": "2.3.0",
         "chalk": "4.1.0",
         "css-loader": "4.2.1",
