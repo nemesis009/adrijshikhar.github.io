@@ -53,7 +53,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       loader: MiniCssExtractPlugin.loader,
       options: Object.assign(
         {},
-        shouldUseRelativeAssetPaths ? { publicPath: '../../' } : undefined
+        shouldUseRelativeAssetPaths ? { publicPath: '../../' } : undefined,
       ),
     },
     {
@@ -199,7 +199,7 @@ module.exports = {
     // https://github.com/facebook/create-react-app/issues/253
     modules: ['node_modules'].concat(
       // It is guaranteed to exist because we tweak it in `env.js`
-      process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
+      process.env.NODE_PATH.split(path.delimiter).filter(Boolean),
     ),
     // These are the reasonable defaults supported by the Node ecosystem.
     // We also include JSX as a common component filename extension to support
@@ -294,7 +294,7 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
               customize: require.resolve(
-                'babel-preset-inferno-app/webpack-overrides'
+                'babel-preset-inferno-app/webpack-overrides',
               ),
 
               cacheDirectory: true,
@@ -372,7 +372,7 @@ module.exports = {
                 importLoaders: 2,
                 sourceMap: shouldUseSourceMap,
               },
-              'sass-loader'
+              'sass-loader',
             ),
             // Don't consider CSS imports dead code even if the
             // containing package claims to have no side effects.
@@ -391,7 +391,7 @@ module.exports = {
                 modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               },
-              'sass-loader'
+              'sass-loader',
             ),
           },
           // "file" loader makes sure assets end up in the `build` folder.

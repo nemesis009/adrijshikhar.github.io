@@ -52,8 +52,8 @@
       padding: 0.5rem;
 
       .img-profile {
-        max-width: $gutterWidth*16;
-        max-height: $gutterWidth*16;
+        max-width: $gutterWidth * 16;
+        max-height: $gutterWidth * 16;
         border: 0.5rem solid fade-out($white, 0.8);
       }
     }
