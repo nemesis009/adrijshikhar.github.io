@@ -8,6 +8,18 @@ const Experience = () => {
     >
       <div class="my-auto">
         <h2 class="mb-5">Experience</h2>
+
+        <ExpCard
+          postition="SDE Intern | Rephare.ai"
+          location="Bangalore"
+          date="Oct 2020 - Present"
+        >
+          <p class="para-content">
+            Use Generative AI to address millions of customers personally,
+            through videos.
+          </p>
+        </ExpCard>
+
         <ExpCard
           postition="Software Engineering Intern | Powerplay"
           location="Bangalore"
