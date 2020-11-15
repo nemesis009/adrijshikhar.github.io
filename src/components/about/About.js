@@ -7,7 +7,7 @@ const About = () => {
           <span class="text-primary ml-1">Shikhar</span>
         </h1>
         <p class="lead mb-5">
-          I am a 21-year-old sophomore currently enrolled in Chemical
+          I am a 21-year-old pre final year student enrolled in Chemical
           Engineering at IIT Roorkee. I developed a passion for development in
           my freshmen year and since then most of my time goes into reading and
           writing software.
@@ -28,14 +28,6 @@ const About = () => {
             rel="noreferrer noopener"
           >
             <i class="fab fa-github"></i>
-          </a>
-          <a
-            class="icon"
-            href="https://dev.to/adrijshikhar"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <i class="fab fa-dev" title="adrijshikhar's DEV Profile"></i>
           </a>
           <a
             class="icon"
@@ -84,6 +76,24 @@ const About = () => {
               </defs>
             </svg>
           </a>
+          <a
+            class="icon"
+            href="https://dev.to/adrijshikhar"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="fab fa-dev" title="adrijshikhar's DEV Profile"></i>
+          </a>
+
+          <a
+            class="icon"
+            href="https://www.reddit.com/user/nemesis0009"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="fab fa-reddit"></i>
+          </a>
+
           <a
             class="icon"
             href="https://www.facebook.com/adrij.shikhar"
