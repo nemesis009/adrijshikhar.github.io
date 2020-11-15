@@ -10,7 +10,7 @@ const Experience = () => {
         <h2 class="mb-5">Experience</h2>
 
         <ExpCard
-          postition="SDE Intern | Rephare.ai"
+          postition="SDE Intern | Rephrase.ai"
           location="Bangalore"
           date="Oct 2020 - Present"
         >
