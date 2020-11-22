@@ -9,6 +9,7 @@ import {
   Experience,
   Projects,
   Interests,
+  Achievements,
 } from './components';
 import { getUser } from './api/githubApi';
 class App extends Component {
@@ -29,6 +30,8 @@ class App extends Component {
           <Experience />
           <hr class="m-0" />
           <Projects />
+          <hr class="m-0" />
+          <Achievements />
           <hr class="m-0" />
           <Interests />
         </Home>
