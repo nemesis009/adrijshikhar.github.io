@@ -7,7 +7,7 @@ const Projects = () => {
         <h2 class="mb-5">Projects</h2>
 
         <ProjectCard
-          title="ScrapperQL"
+          title="ScraperQL"
           company="Dgraph Labs"
           date="20 Oct 2020 - Present"
         >
@@ -20,7 +20,7 @@ const Projects = () => {
           <ProjectCard.Para>
             <ul>
               <li>
-                Developed a web scrapper using GraphQL to leverage the nesting
+                Developed a web scraper using GraphQL to leverage the nesting
                 power of it.
               </li>
               <li>

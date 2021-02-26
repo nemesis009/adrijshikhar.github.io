@@ -130,7 +130,8 @@ p.lead {
   .list-item {
     width: fit-content;
     margin-right: $gutterWidth;
-
+    display: flex;
+    align-items: center;
     &:hover,
     svg:hover .icon,
     img:hover .icon {
